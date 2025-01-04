@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-04T00:55:53.077Z",
+    "end": "2025-01-04T00:56:03.693Z",
+    "duration": 10616,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d94b4260-f20e-42c8-9783-7b7befb1057f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\sauceDemoTest\\loginTests.cy.js",
+      "file": "cypress\\e2e\\sauceDemoTest\\loginTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7d496855-45f6-40d3-ba6a-be9e3d6979ab",
+          "title": "Login page verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with Accepted username standard_user & Password",
+              "fullTitle": "Login page verification login with Accepted username standard_user & Password",
+              "timedOut": null,
+              "duration": 9663,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('standard_user');\nloginPage.enterPassword('secret_sauce');\nloginPage.clickLoginButton();\nproductsPage.cartButtonExists();",
+              "err": {},
+              "uuid": "f7dcfcf6-7a61-4446-8c91-8a534dbbb279",
+              "parentUUID": "7d496855-45f6-40d3-ba6a-be9e3d6979ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with incorrect username standard_user & Password",
+              "fullTitle": "Login page verification login with incorrect username standard_user & Password",
+              "timedOut": null,
+              "duration": 884,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('standard_user');\nloginPage.enterPassword('secret_sauce_wrong');\nloginPage.clickLoginButton();\nloginPage.loginPageElements.errorMessage().should('be.visible');",
+              "err": {},
+              "uuid": "d63ce58b-115a-4873-a4ea-2db75551cd64",
+              "parentUUID": "7d496855-45f6-40d3-ba6a-be9e3d6979ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7dcfcf6-7a61-4446-8c91-8a534dbbb279",
+            "d63ce58b-115a-4873-a4ea-2db75551cd64"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10547,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "yyyy-mm-dd_HH-MM-ss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

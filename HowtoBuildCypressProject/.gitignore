@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Cypress generated files
+cypress/videos/
+cypress/screenshots/
+
+# Environment variables
+.env
+
+# Operating system files (macOS example)
+.DS_Store
+
+# IDE/editor files (e.g., VSCode, Sublime)
+.vscode/
+.idea/
+
+# Logs
+*.log

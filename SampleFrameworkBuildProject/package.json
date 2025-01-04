@@ -1,0 +1,21 @@
+{
+  "name": "SampleFrameworkBuildProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runChrome":"npx cypress run --browser chrome --headed",
+    "merge-json":"npx mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/mochawesome-report/merged-report.json",
+    "generate-html":"npx mochawesome-report-generator cypress/reports/mochawesome-report/merged-report.json -o cypress/reports/mochawesome-report"
+
+    
+  },
+  "keywords": [],
+  "author": "RoshanM",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.17.0",
+    "mochawesome": "^7.1.3"
+  }
+}

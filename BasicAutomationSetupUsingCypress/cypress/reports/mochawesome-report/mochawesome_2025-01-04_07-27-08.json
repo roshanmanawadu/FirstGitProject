@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-04T01:57:03.648Z",
+    "end": "2025-01-04T01:57:08.845Z",
+    "duration": 5197,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4f8a1fbf-5f04-442f-8908-cbec7fe53af8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\sampleTest5.cy.js",
+      "file": "cypress\\e2e\\sampleTest5.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f86a5ad-b31b-4a82-a53c-6c6fd5a0a8eb",
+          "title": "SauceDemo Inventory - Add Random Items to Cart check the count and remove and assert",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should scroll, add random items to cart, and assert items in cart",
+              "fullTitle": "SauceDemo Inventory - Add Random Items to Cart check the count and remove and assert should scroll, add random items to cart, and assert items in cart",
+              "timedOut": null,
+              "duration": 3973,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add first item to the cart\ncy.get(':nth-child(1) > .pricebar > .btn_primary').click();\n// Scroll down and add another item\ncy.scrollTo('center', 'center', {\n  duration: 1000,\n  easing: 'linear'\n});\ncy.get(':nth-child(5) > .pricebar > .btn_primary').click();\n// Add another item (nth-child(6))\ncy.get(':nth-child(6) > .pricebar > .btn_primary').click();\n// Scroll to the top and go to the cart page\ncy.scrollTo('top');\ncy.get('.fa-layers-counter').click();\n// Assert the cart page URL & the cart item count\ncy.url().should('eq', 'https://www.saucedemo.com/v1/cart.html');\ncy.get('.fa-layers-counter').should('have.text', '3');\n//Remove the item from cart \ncy.get(':nth-child(3) > .cart_item_label > .item_pricebar > .btn_secondary').click();\n// Assert the cart item count\ncy.get('.fa-layers-counter').should('have.text', '2');",
+              "err": {},
+              "uuid": "f9f2a364-66c5-4c49-b4a5-6b3f634e5e6b",
+              "parentUUID": "7f86a5ad-b31b-4a82-a53c-6c6fd5a0a8eb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9f2a364-66c5-4c49-b4a5-6b3f634e5e6b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3973,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "yyyy-mm-dd_HH-MM-ss",
+        "charts": true,
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
